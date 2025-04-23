@@ -1,0 +1,51 @@
+#include "codeKatas.h"
+
+using namespace std;
+
+// Given a string s, return the longest palindromic substring in s.
+
+class LongestPalindrome {
+public:
+	string Solution(string s) {
+        int front = 0, maxfront = 0, maxlen = 0;
+        while (front < s.length()) {
+            int len = 1;
+            while (front + len < s.length()) {
+                if (isPalindrome(s.substr(front, len))) {
+                    if (len > maxlen) {
+                        maxlen = len;
+                        maxfront = front;
+                    }
+                }
+                len++;
+            }
+            front++;
+        }
+
+        return s.substr(maxfront, maxlen);
+    }
+
+    bool isPalindrome(string s) {
+        int front = 0, back = s.length() - 1;
+        while (front < back) {
+            if (s[front] != s[back]) {
+                return false;
+            }
+            front++;
+            back--;
+        }
+        return true;
+    }
+
+    void Test(string s, string expected) {
+        cout << "s = " << s << " Expectation: " << expected;
+        auto actual = Solution(s);
+        cout << " Actual: " << actual << " *** " << ((expected == actual) ? "Pass" : "Fail") << " ***" << endl;
+    }
+
+    LongestPalindrome() {
+        Test("babad", "bab");
+        Test("cbbd", "bb");
+    }
+
+};
