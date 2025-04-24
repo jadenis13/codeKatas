@@ -7,6 +7,7 @@
 #include "0007.Reverse.hpp"
 #include "0008.MyAToI.hpp"
 #include "0009.IsPalindromeNumber.hpp"
+#include "0012.IntegerToRoman.hpp"
 
 using namespace std;
 
@@ -27,6 +28,7 @@ int main() {
 	auto reverse = new Reverse(out);
 	auto myAToI = new MyAToI(out);
 	auto isPalindromeNumber = new IsPalindromeNumber(out);
+	auto integerToRoman = new IntegerToRoman(out);
 
 	if (out.str().contains("Fail")) {
 		return -1;
