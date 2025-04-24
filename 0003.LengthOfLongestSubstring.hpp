@@ -8,7 +8,7 @@ class LengthOfLongestSubstring {
 public:
 	int Solution(string s) {
         string longestSub;
-        int i = 0, j = 0, max = 0;
+        size_t i = 0, j = 0, max = 0;
         while (j < s.length()) {
             if (longestSub.contains(s[j]) == false) {
                 longestSub.push_back(s[j++]);
@@ -21,7 +21,7 @@ public:
                 max = longestSub.length();
             }
         }
-        return max;
+        return static_cast<int>(max);
     }
 
 	void Test(string s, int expected) {

@@ -7,7 +7,7 @@ using namespace std;
 class LongestPalindrome {
 public:
 	string Solution(string s) {
-        int front = 0, maxfront = 0, maxlen = 0;
+        size_t front = 0, maxfront = 0, maxlen = 0;
         while (front < s.length()) {
             int len = 1;
             while (front + len < s.length()) {
@@ -26,7 +26,7 @@ public:
     }
 
     bool isPalindrome(string s) {
-        int front = 0, back = s.length() - 1;
+        size_t front = 0, back = s.length() - 1;
         while (front < back) {
             if (s[front] != s[back]) {
                 return false;

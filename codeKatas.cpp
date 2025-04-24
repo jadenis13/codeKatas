@@ -4,6 +4,7 @@
 #include "0003.LengthOfLongestSubstring.hpp"
 #include "0004.FindMedianSortedArrays.hpp"
 #include "0005.LongestPalindrome.hpp"
+#include "0007.Reverse.hpp"
 
 using namespace std;
 
@@ -14,12 +15,12 @@ ostream& operator<<(ostream& out, const vector<int>& v) {
 	return out;
 }
 
-int main()
-{
+int main() {
 	auto twoSum = new TwoSum();
 	auto addTwoNumbers = new AddTwoNumbers();
 	auto lengthOfLongestSubstring = new LengthOfLongestSubstring();
 	auto findMedianOfSortedArrays = new FindMedianSortedArrays();
 	auto longestPalindrome = new LongestPalindrome();
+	auto reverse = new Reverse();
 	return 0;
 }
