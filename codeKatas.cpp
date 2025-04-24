@@ -8,15 +8,10 @@
 #include "0008.MyAToI.hpp"
 #include "0009.IsPalindromeNumber.hpp"
 #include "0012.IntegerToRoman.hpp"
+#include "3522.CalculateScore.hpp"
 
 using namespace std;
 
-ostream& operator<<(ostream& out, const vector<int>& v) {
-	if (!v.empty()) {
-		out << '['; ranges::copy(v, ostream_iterator<int>(out, ", ")); out << "\b\b]"; // overwrite trailing comma separator
-	}
-	return out;
-}
 
 int main() {
 	ostringstream out;
