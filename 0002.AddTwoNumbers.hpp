@@ -70,28 +70,28 @@ public:
         return ret;
     }
 
-    void Test(ListNode* in1, ListNode* in2, vector<int> expected) {
-        cout << "L1 = " << to_vector(in1) << " L2 = " << to_vector(in2) << " Expectation: " << expected;
+    void Test(ostream& out, ListNode* in1, ListNode* in2, vector<int> expected) {
+        out << "L1 = " << to_vector(in1) << " L2 = " << to_vector(in2) << " Expectation: " << expected;
         auto actual = to_vector(Solution(in1, in2));
-        cout << " Actual: " << actual << " *** " << ((expected == actual) ? "Pass" : "Fail") << " ***" << endl;
+        out << " Actual: " << actual << " *** " << ((expected == actual) ? "Pass" : "Fail") << " ***" << endl;
     }
 
-    AddTwoNumbers() {
+    AddTwoNumbers(ostream& out) {
         ListNode* l1 = to_list({ 2, 4, 3 });
         ListNode* r1 = to_list({ 5, 6, 4 });
-        Test(l1, r1, { 7, 0, 8 });
+        Test(out, l1, r1, { 7, 0, 8 });
         delete_list(&l1);
         delete_list(&r1);
 
         l1 = new ListNode(0);
         r1 = new ListNode(0);
-        Test(l1, r1, { 0 });
+        Test(out, l1, r1, { 0 });
         delete_list(&l1);
         delete_list(&r1);
 
         l1 = to_list({ 9, 9, 9, 9, 9, 9, 9 });
         r1 = to_list({ 9, 9, 9, 9 });
-        Test(l1, r1, { 8, 9, 9, 9, 0, 0, 0, 1 });
+        Test(out, l1, r1, { 8, 9, 9, 9, 0, 0, 0, 1 });
         delete_list(&l1);
         delete_list(&r1);
     }

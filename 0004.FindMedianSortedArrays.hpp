@@ -40,14 +40,14 @@ public:
         return median;
     }
 
-    void Test(vector<int> nums1, vector<int> nums2, double expected) {
-        cout << "nums1 = " << nums1 << " nums2 = " << nums2 << " Expectation: " << expected;
+    void Test(ostream& out, vector<int> nums1, vector<int> nums2, double expected) {
+        out << "nums1 = " << nums1 << " nums2 = " << nums2 << " Expectation: " << expected;
         auto actual = Solution(nums1, nums2);
-        cout << " Actual: " << actual << " *** " << ((expected == actual) ? "Pass" : "Fail") << " ***" << endl;
+        out << " Actual: " << actual << " *** " << ((expected == actual) ? "Pass" : "Fail") << " ***" << endl;
     }
 
-    FindMedianSortedArrays() {
-        Test({ 1, 3 }, { 2 }, 2.0000);
-        Test({ 1, 2 }, { 3, 4 }, 2.5000);
+    FindMedianSortedArrays(ostream& out) {
+        Test(out, { 1, 3 }, { 2 }, 2.0000);
+        Test(out, { 1, 2 }, { 3, 4 }, 2.5000);
     }
 };

@@ -34,18 +34,18 @@ public:
         return true;
     }
 
-	void Test(int x, bool expected) {
-		cout << "x = " << x << " Expectation: " << expected;
+	void Test(ostream& out, int x, bool expected) {
+		out << "x = " << x << " Expectation: " << expected;
 		auto actual = Solution(x);
-		cout << " Actual: " << actual << " *** " << ((expected == actual) ? "Pass" : "Fail") << " ***" << endl;
+		out << " Actual: " << actual << " *** " << ((expected == actual) ? "Pass" : "Fail") << " ***" << endl;
 	}
 
-	IsPalindromeNumber() {
-		Test(121, true);
-        Test(-121, false);
-        Test(10, false);
-        Test(0, true);
-        Test(1221, true);
-        Test(2113113112, true);
+	IsPalindromeNumber(ostream& out) {
+		Test(out, 121, true);
+        Test(out, -121, false);
+        Test(out, 10, false);
+        Test(out, 0, true);
+        Test(out, 1221, true);
+        Test(out, 2113113112, true);
     }
 };

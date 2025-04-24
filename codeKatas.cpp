@@ -18,13 +18,18 @@ ostream& operator<<(ostream& out, const vector<int>& v) {
 }
 
 int main() {
-	auto twoSum = new TwoSum();
-	auto addTwoNumbers = new AddTwoNumbers();
-	auto lengthOfLongestSubstring = new LengthOfLongestSubstring();
-	auto findMedianOfSortedArrays = new FindMedianSortedArrays();
-	auto longestPalindrome = new LongestPalindrome();
-	auto reverse = new Reverse();
-	auto myAToI = new MyAToI();
-	auto isPalindromeNumber = new IsPalindromeNumber();
+	ostringstream out;
+	auto twoSum = new TwoSum(out);
+	auto addTwoNumbers = new AddTwoNumbers(out);
+	auto lengthOfLongestSubstring = new LengthOfLongestSubstring(out);
+	auto findMedianOfSortedArrays = new FindMedianSortedArrays(out);
+	auto longestPalindrome = new LongestPalindrome(out);
+	auto reverse = new Reverse(out);
+	auto myAToI = new MyAToI(out);
+	auto isPalindromeNumber = new IsPalindromeNumber(out);
+
+	if (out.str().contains("Fail")) {
+		return -1;
+	}
 	return 0;
 }

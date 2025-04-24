@@ -20,16 +20,16 @@ public:
         return {};
 	}
 
-    void Test(vector<int> nums, int target, vector<int> expected) {
-        cout << "nums = " << nums << " target = " << target << ". Expectation: " << expected;
+    void Test(ostream& out, vector<int> nums, int target, vector<int> expected) {
+        out << "nums = " << nums << " target = " << target << ". Expectation: " << expected;
         auto actual = Solution(nums, target);
-        cout << " Actual: " << actual << " *** " << ((expected == actual) ? "Pass" : "Fail") << " ***" << endl;
+        out << " Actual: " << actual << " *** " << ((expected == actual) ? "Pass" : "Fail") << " ***" << endl;
     }
 
-    TwoSum() {
-        Test({ 2, 7, 11, 15 }, 9, { 0, 1 });
-        Test({ 3, 2, 4 }, 6, { 1, 2 });
-        Test({ 3, 3 }, 6, { 0, 1 });
+    TwoSum(ostream& out) {
+        Test(out, { 2, 7, 11, 15 }, 9, { 0, 1 });
+        Test(out, { 3, 2, 4 }, 6, { 1, 2 });
+        Test(out, { 3, 3 }, 6, { 0, 1 });
     }
 
 };

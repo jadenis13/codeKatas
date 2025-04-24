@@ -44,22 +44,22 @@ public:
 		return static_cast<int>(ret) * sign;
 	}
 
-	void Test(string s, int expected) {
-		cout << "s = " << s << " Expectation: " << expected;
+	void Test(ostream& out, string s, int expected) {
+		out << "s = " << s << " Expectation: " << expected;
 		auto actual = Solution(s);
-		cout << " Actual: " << actual << " *** " << ((expected == actual) ? "Pass" : "Fail") << " ***" << endl;
+		out << " Actual: " << actual << " *** " << ((expected == actual) ? "Pass" : "Fail") << " ***" << endl;
 	}
 
-	MyAToI() {
-		Test("42", 42);
-		Test("  -042", -42);
-		Test("1337c0d3", 1337);
-		Test("0-1", 0);
-		Test("words and 987", 0);
-		Test("2147483646", 2147483646);
-		Test("2147483648", 2147483647);
-		Test("21474836460", 2147483647);
-		Test("-2147483647", -2147483647);
-		Test("-91283472332", -2147483648);
+	MyAToI(ostream& out) {
+		Test(out, "42", 42);
+		Test(out, "  -042", -42);
+		Test(out, "1337c0d3", 1337);
+		Test(out, "0-1", 0);
+		Test(out, "words and 987", 0);
+		Test(out, "2147483646", 2147483646);
+		Test(out, "2147483648", 2147483647);
+		Test(out, "21474836460", 2147483647);
+		Test(out, "-2147483647", -2147483647);
+		Test(out, "-91283472332", -2147483648);
 	}
 };

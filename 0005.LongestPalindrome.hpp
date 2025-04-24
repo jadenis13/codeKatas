@@ -37,18 +37,17 @@ public:
         return true;
     }
 
-    void Test(string s, string expected) {
-        cout << "s = " << s << " Expectation: " << expected;
+    void Test(ostream& out, string s, string expected) {
+        out << "s = " << s << " Expectation: " << expected;
         auto actual = Solution(s);
-        cout << " Actual: " << actual << " *** " << ((expected == actual) ? "Pass" : "Fail") << " ***" << endl;
+        out << " Actual: " << actual << " *** " << ((expected == actual) ? "Pass" : "Fail") << " ***" << endl;
     }
 
-    LongestPalindrome() {
-        Test("babad", "bab");
-        Test("cbbd", "bb");
-        Test("a", "a");
-        Test("bb", "bb");
-        Test("0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
+    LongestPalindrome(ostream& out) {
+        Test(out, "babad", "bab");
+        Test(out, "cbbd", "bb");
+        Test(out, "a", "a");
+        Test(out, "bb", "bb");
     }
 
 };

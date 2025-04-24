@@ -20,16 +20,16 @@ public:
         return reversed;
     }
 
-    void Test(int x, int expected) {
-        cout << "x = " << x << " Expectation: " << expected;
+    void Test(ostream& out, int x, int expected) {
+        out << "x = " << x << " Expectation: " << expected;
         auto actual = Solution(x);
-        cout << " Actual: " << actual << " *** " << ((expected == actual) ? "Pass" : "Fail") << " ***" << endl;
+        out << " Actual: " << actual << " *** " << ((expected == actual) ? "Pass" : "Fail") << " ***" << endl;
     }
 
-    Reverse() {
-        Test(123, 321);
-        Test(-123, -321);
-        Test(120, 21);
+    Reverse(ostream& out) {
+        Test(out, 123, 321);
+        Test(out, -123, -321);
+        Test(out, 120, 21);
     }
 
 };

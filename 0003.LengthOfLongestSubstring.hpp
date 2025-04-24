@@ -24,15 +24,15 @@ public:
         return static_cast<int>(max);
     }
 
-	void Test(string s, int expected) {
-        cout << "s = " << s << " Expectation: " << expected;
+	void Test(ostream& out, string s, int expected) {
+        out << "s = " << s << " Expectation: " << expected;
         auto actual = Solution(s);
-        cout << " Actual: " << actual << " *** " << ((expected == actual) ? "Pass" : "Fail") << " ***" << endl;
+        out << " Actual: " << actual << " *** " << ((expected == actual) ? "Pass" : "Fail") << " ***" << endl;
     }
 
-	LengthOfLongestSubstring() {
-		Test("abcabcbb", 3);
-		Test("bbbbb", 1);
-		Test("pwwkew", 3);
+	LengthOfLongestSubstring(ostream& out) {
+		Test(out, "abcabcbb", 3);
+		Test(out, "bbbbb", 1);
+		Test(out, "pwwkew", 3);
 	}
 };

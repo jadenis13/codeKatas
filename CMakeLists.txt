@@ -13,6 +13,7 @@ project ("codeKatas")
 
 # Add source to this project's executable.
 add_executable (codeKatas "codeKatas.cpp" "codeKatas.h")
+add_test (NAME TestBed COMMAND codeKatas)
 
 if (CMAKE_VERSION VERSION_GREATER 3.20)
   set_property(TARGET codeKatas PROPERTY CXX_STANDARD 23)
