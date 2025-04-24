@@ -5,6 +5,8 @@
 #include "0004.FindMedianSortedArrays.hpp"
 #include "0005.LongestPalindrome.hpp"
 #include "0007.Reverse.hpp"
+#include "0008.MyAToI.hpp"
+#include "0009.IsPalindromeNumber.hpp"
 
 using namespace std;
 
@@ -22,5 +24,7 @@ int main() {
 	auto findMedianOfSortedArrays = new FindMedianSortedArrays();
 	auto longestPalindrome = new LongestPalindrome();
 	auto reverse = new Reverse();
+	auto myAToI = new MyAToI();
+	auto isPalindromeNumber = new IsPalindromeNumber();
 	return 0;
 }
