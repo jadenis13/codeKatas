@@ -10,7 +10,7 @@ public:
         size_t front = 0, maxfront = 0, maxlen = 0;
         while (front < s.length()) {
             int len = 1;
-            while (front + len < s.length()) {
+            while (front + len <= s.length()) {
                 if (isPalindrome(s.substr(front, len))) {
                     if (len > maxlen) {
                         maxlen = len;
@@ -46,6 +46,9 @@ public:
     LongestPalindrome() {
         Test("babad", "bab");
         Test("cbbd", "bb");
+        Test("a", "a");
+        Test("bb", "bb");
+        Test("0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000", "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
     }
 
 };
