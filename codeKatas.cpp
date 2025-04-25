@@ -8,10 +8,10 @@
 #include "0008.MyAToI.hpp"
 #include "0009.IsPalindromeNumber.hpp"
 #include "0012.IntegerToRoman.hpp"
+#include "2845.CountInterestingSubarrays.hpp"
 #include "3522.CalculateScore.hpp"
 
 using namespace std;
-
 
 int main() {
 	ostringstream out;
@@ -24,8 +24,11 @@ int main() {
 	auto myAToI = new MyAToI(out);
 	auto isPalindromeNumber = new IsPalindromeNumber(out);
 	auto integerToRoman = new IntegerToRoman(out);
+	auto countInterestingSubarrays = new CountInterestingSubarrays(out);
+	auto calculateScore = new CalculateScore(out);
 
 	if (out.str().contains("Fail")) {
+		cout << out.str();
 		return -1;
 	}
 	return 0;
