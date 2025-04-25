@@ -4,6 +4,8 @@ using namespace std;
 
 // Given a string s, return the longest palindromic substring in s.
 
+// TODO: fix me, time out on very long inputs that are palindromes
+
 class LongestPalindrome {
 public:
 	string Solution(string s) {
