@@ -31,6 +31,8 @@ public:
                 return score;
             }
 
+            wasVisited[cursor] = true;
+
             if (instructions[cursor] == JMP) {
                 cursor += values[cursor];
             }
@@ -38,11 +40,10 @@ public:
                 score += values[cursor];
                 cursor++;
             }
+
             if (cursor < 0 || cursor >= instructions.size()) {
                 inBounds = false;
             }
-
-            wasVisited[cursor] = true;
         }
 
         return score;
