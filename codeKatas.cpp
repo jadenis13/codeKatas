@@ -10,6 +10,9 @@
 #include "0012.IntegerToRoman.hpp"
 #include "2845.CountInterestingSubarrays.hpp"
 #include "3522.CalculateScore.hpp"
+#include "3527.FindCommonResponse.hpp"
+#include "3528.BaseUnitConversions.hpp"
+#include "3529.CountCells.hpp"
 
 using namespace std;
 
@@ -26,6 +29,9 @@ int main() {
 	auto integerToRoman = new IntegerToRoman(out);
 	auto countInterestingSubarrays = new CountInterestingSubarrays(out);
 	auto calculateScore = new CalculateScore(out);
+	auto findCommonResponse = new FindCommonResponse(out);
+	auto baseUnitConversions = new BaseUnitConversions(out);
+	auto countCells = new CountCells(out);
 
 	if (out.str().contains("Fail")) {
 		cout << out.str();
